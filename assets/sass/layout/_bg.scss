@@ -46,8 +46,13 @@
       'transform #{_duration(article)} ease-in-out',
       'filter #{_duration(article)} ease-in-out'
     ));
-    background-image: url('../../images/bg.jpg');
-    background-position: center;
+    background-image: url('../../images/bg-w1920-q50.jpg');
+
+    @include breakpoint(small) {
+      background-image: url('../../images/bg-w736-q75.jpg');
+    }
+
+    background-position: left center;
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 1;
