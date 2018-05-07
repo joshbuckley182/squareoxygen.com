@@ -404,6 +404,23 @@
                 $main._show(location.hash.substr(1), true);
             });
 
+
+        // Accordion
+        $('.accordion-link').each(function () {
+            $('<i class="icon fa-chevron-right"></i>')
+                .prependTo($(this));
+        });
+
+        $('.accordion').on('click', '.accordion-link', function (e) {
+            e.preventDefault();
+
+            const contentId = this.dataset.toggle;
+
+            this.children[0].classList.toggle('fa-chevron-right');
+            this.children[0].classList.toggle('fa-chevron-down');
+
+            document.getElementById(contentId).classList.toggle('visible');
+        });
     });
 
 })(jQuery);

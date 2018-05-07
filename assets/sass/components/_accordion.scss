@@ -1,0 +1,15 @@
+.accordion-link {
+  i {
+    display: inline-block;
+    width: 20px;
+    margin-right: 3px;
+  }
+}
+
+.accordion-content {
+  display: none;
+
+  &.visible {
+    display: initial;
+  }
+}
