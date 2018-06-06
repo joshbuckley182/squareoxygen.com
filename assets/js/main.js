@@ -414,12 +414,25 @@
         $('.accordion').on('click', '.accordion-link', function (e) {
             e.preventDefault();
 
-            const contentId = this.dataset.toggle;
+            var contentId = this.dataset.toggle;
 
-            this.children[0].classList.toggle('fa-chevron-right');
-            this.children[0].classList.toggle('fa-chevron-down');
 
-            document.getElementById(contentId).classList.toggle('visible');
+            // Collapse sections not being interacted with
+            $('.accordion-link:not([data-toggle=' + contentId + ']) i')
+                .removeClass('fa-chevron-down')
+                .addClass('fa-chevron-right');
+
+            $('.accordion-content:not(#' + contentId + ')')
+                .removeClass('visible');
+
+
+            // Toggle section being interacted with
+            $('.accordion-link[data-toggle=' + contentId + '] i')
+                .toggleClass('fa-chevron-down')
+                .toggleClass('fa-chevron-right');
+
+            $('#' + contentId)
+                .toggleClass('visible');
         });
     });
 

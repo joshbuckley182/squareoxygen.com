@@ -10,6 +10,6 @@
   display: none;
 
   &.visible {
-    display: initial;
+    display: unset;
   }
 }
