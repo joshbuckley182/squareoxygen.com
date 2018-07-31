@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAcE,UAAS,CACP,UAAU,CCwIJ,kBAAmB,CDjI3B,aAAM,CACJ,MAAM,CAAE,MAAM,CAGhB,gBAAS,CACP,OAAO,CAAE,YAAY,CAIrB,cAAG,CACD,OAAO,CAAE,YAAY,CAErB,iBAAG,CACD,OAAO,CAAE,YAAY,CAS3B,aAAQ,CACN,MAAM,CAAE,MAAM",
-"sources": ["../sass/ie9.scss","../sass/libs/_skel.scss"],
-"names": [],
-"file": "ie9.css"
-}
